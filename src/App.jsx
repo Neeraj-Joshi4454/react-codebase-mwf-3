@@ -4,6 +4,7 @@ import Services from './components/Services';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import NavbarComp from './components/NavbarComp';
 import State from './components/State';
+import API from './components/API';
 const App = () => {
 
     return(
@@ -16,6 +17,7 @@ const App = () => {
                     <Route path="/services" element={<Services/>}/>
                     <Route path="/about" element={<About/>}/>
                     <Route path="/state" element={<State/>}/>
+                    <Route path="/api" element={<API/>}/>
 
                 </Routes>
 
