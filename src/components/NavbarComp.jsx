@@ -15,6 +15,11 @@ const NavbarComp = () => {
           <li className="hover:bg-white hover:text-black p-2 rounded-md cursor-pointer"> <NavLink to="/state">State</NavLink> </li>
 
           <li className="hover:bg-white hover:text-black p-2 rounded-md cursor-pointer"> <NavLink to="/api">API</NavLink> </li>
+
+
+          <li className="hover:bg-white hover:text-black p-2 rounded-md cursor-pointer"> <NavLink to="/products">Products</NavLink> </li>
+
+          <li className="hover:bg-white hover:text-black p-2 rounded-md cursor-pointer"> <NavLink to="/Demo">Class Component</NavLink> </li>
           
         </ul>
       </nav>

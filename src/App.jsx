@@ -5,6 +5,8 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import NavbarComp from './components/NavbarComp';
 import State from './components/State';
 import API from './components/API';
+import Products from './components/Products';
+import Demo from './components/Demo';
 const App = () => {
 
     return(
@@ -18,6 +20,8 @@ const App = () => {
                     <Route path="/about" element={<About/>}/>
                     <Route path="/state" element={<State/>}/>
                     <Route path="/api" element={<API/>}/>
+                    <Route path="/products" element={<Products/>}/>
+                    <Route path="/demo" element={<Demo name="felix"/>}/>
 
                 </Routes>
 

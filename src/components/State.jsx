@@ -1,142 +1,36 @@
-// import React, {useState} from 'react';
+import React from 'react';
+class MyComponent extends React.Component {
 
-// const State = () => {
+    constructor(props) {
+      super(props);
 
-//     const [count, setCount] = useState(0);
+      this.state = {
+        count: 0
+      };
 
-
-//     const incCount = () => {        
-//         setCount(count + 1)
-//     }   
-    
-//     const decCount = () => {
-//         setCount(count - 1)
-//     }
-
-//     console.log("component rendered")
-
-
-//   return (
-//     <>  
-//         <div>
-//             <button 
-//             className='bg-black text-white rounded-md shadow-md p-2 m-2'
-//             onClick={incCount}
-//             >Increment</button>
-
-//             <h3 className='text-lg m-4'>{count}</h3>
-            
-//             <button 
-//             className='bg-black text-white rounded-md shadow-md p-2 m-2'
-//             onClick={decCount}
-//             >Decrement</button>
-//         </div>
-//     </>
-//   )
-// }
-
-// export default State
-
-
-// state with String
-
-// import React, { useState } from 'react'
-
-// const State = () => {
-
-//     const [name , setName ] = useState("felix");
-
-//   return (
-//     <>
-//         <h1>Name : {name}</h1>
-//         <button className='bg-black text-white rounded-md shadow-md p-2 m-2'
-//         onClick={() => {setName('ITs')}}
-//         >Change Name</button>
-
-//     </>
-//   )
-// }
-
-// export default State
-
-
-
-// import React, {useState} from 'react'
-
-// const State = () => {
-
-//     const [courses , setCourses] = useState(["MERN", "MEAN"]);
-
-//     const addCourse = () => {
-
-//         const newCourse = window.prompt('Enter the name of course.');
-//         setCourses([...courses, newCourse]);
-//     }
-
-//   return (
-//     <>
-//         <div>Courses : </div>
-//         <ul>
-//             {courses.map((val) => {
-//                 return <li>{val}</li>
-//             })}
-//         </ul>
-
-//         <button className='bg-black text-white rounded-md shadow-md p-2 m-2' onClick={addCourse}>Add Course</button>
-//     </>
-//   )
-// }
-
-// export default State
-
-
-
-import React, {useState} from 'react'
-
-const State = () => {
-
-    const [student, setStudent] = useState([
-        {id : 1, name : "Student1"}
-    ]);
-
-    const addStudent = () => {
-        const newObj = {
-            id  : 2,
-            name : "Student 2"
-        }
-
-        setStudent([...student, newObj])
     }
 
-  return (
-    <>
-        <h1>Students</h1>
+  
+  
+    render() {
+      const { name } = this.props;
+    
+      const { count } = this.state;
+    
+      const changeCount = () => {
 
-        <button 
-        className='bg-black text-white rounded-md shadow-md p-2 m-2'
-        onClick={addStudent}
-        >Add Student</button>
-        <table>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-            </tr>
-            
-            {
-                student.map((val) => {
-                    return(
-                        <tr>
-                            <td>{val.id}</td>
-                            <td>{val.name}</td>
-                        </tr>           
-                    );
-                })
-            }
-
-        </table>
-
-    </>
-  )
-}
-
-export default State
+        this.setState({
+            count : this.state.count + 1
+        })
+        
+      }
+      return (
+        <div>
+          <h1>Hello, {name}!</h1>
+          <p>Count: {count}</p>
+          <button onClick={changeCount}>Increment Count</button>
+        </div>
+      );
+    }
+  }
+  export default MyComponent;
